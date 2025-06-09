@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="title">Rock Paper Scissors Classifier</h1>
+  <p class="subtitle">Upload an image to see if it's rock, paper, or scissors</p>
+
+  <div class="upload-container">
+    <form action="" method="post" enctype="multipart/form-data" id="upload-form">
+      {{ form.csrf_token }}
+      <div class="upload-area" id="drop-area">
+        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+        <p class="upload-instructions">Drag and drop an image here or click to upload</p>
+        <p class="file-name" id="file-name"></p>
+        {{ form.image(class="hidden-input", id="file-input") }}
+        <button type="submit" class="submit-btn" id="submit-btn" disabled>Classify Image</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="results-container">
+    <div class="result-card" id="result-card" {% if prediction %}style="display: block;"{% endif %}>
+      <div class="result-header">Results</div>
+      <div class="result-content">
+        {% if image_path %}
+          <img src="{{ image_path }}" alt="Uploaded image" class="result-image">
+        {% endif %}
+
+        {% if prediction %}
+          {% set prediction_class = prediction.keys()|list|first %}
+          {% set confidence = (prediction.values()|list|first * 100)|round(2) %}
+          <p class="prediction {{ prediction_class }}">{{ prediction_class }}</p>
+          <p class="confidence">Confidence: {{ confidence }}%</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+  <script src="{{ url_for("static", filename="js/script.js") }}"></script>
+{% endblock %}
+
+
+
+
+
