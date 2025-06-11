@@ -25,24 +25,33 @@ This project uses the [Rock-Paper-Scissors dataset](https://www.kaggle.com/datas
    cd rock-paper-scissors-classification
    ```
 
-2. Create and activate a virtual environment (optional but recommended):
+2. Install Git LFS:
+   This repository uses Git Large File Storage (LFS) for the model files.
+   - [Install Git LFS](https://git-lfs.com) following the official instructions
+   - After installation, set up LFS and pull the model files:
+   ```bash
+   git lfs install
+   git lfs pull
+   ```
+
+3. Create and activate a virtual environment (optional but recommended):
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows, use: venv\Scripts\activate
    ```
 
-3. Install dependencies:
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Create environment variables:
+5. Create environment variables:
    ```bash
    cp .env.sample .env
    ```
    Then edit the `.env` file with your settings.
 
-5. Make sure the directory structure includes:
+6. Make sure the directory structure includes:
    - `static/uploads/` for uploaded images
    - `static/models/` with the trained model file
 
