@@ -4,7 +4,7 @@ from tensorflow import expand_dims
 from keras.src.utils import img_to_array, load_img
 from tensorflow.keras.models import Model
 
-IMAGE_SIZE = (300, 200)
+IMAGE_SIZE = (300, 300)
 
 classes = {0: "paper", 1: "rock", 2: "scissors"}
 

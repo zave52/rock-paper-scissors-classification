@@ -8,7 +8,7 @@ A web application that classifies images as rock, paper, or scissors using a mac
 
 ## Dataset
 
-This project uses the [Rock-Paper-Scissors dataset](https://www.kaggle.com/datasets/drgfreeman/rockpaperscissors) from Kaggle.
+This project uses the [Rock-Paper-Scissors dataset](https://www.kaggle.com/datasets/alexandredj/rock-paper-scissors-dataset) from Kaggle.
 
 ## Prerequisites
 
