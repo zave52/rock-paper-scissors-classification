@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors Classification
 
-A web application that classifies images as rock, paper, or scissors using a machine learning model.
+A web application that classifies images of hand gestures as rock, paper, or scissors using a machine learning model.
 
 ## Building model
 
