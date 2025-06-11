@@ -18,7 +18,7 @@ csrf = CSRFProtect(app)
 STATIC_FOLDER = "static/"
 UPLOAD_FOLDER = STATIC_FOLDER + "uploads/"
 
-model = load_model("static/models/rock-paper-scissors.h5")
+model = load_model("static/models/rock-paper-scissors.keras")
 
 
 class ImageForm(FlaskForm):
