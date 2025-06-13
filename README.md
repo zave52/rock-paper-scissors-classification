@@ -21,7 +21,7 @@ This project uses the [Rock-Paper-Scissors dataset](https://www.kaggle.com/datas
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/rock-paper-scissors-classification.git
+   git clone https://github.com/zave52/rock-paper-scissors-classification.git
    cd rock-paper-scissors-classification
    ```
 
